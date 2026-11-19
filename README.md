@@ -798,9 +798,7 @@ Never commit real API keys to GitHub.
 
 ## 18. Preparing the Vector Database
 
-The public repository does not include the complete resume dataset, embedding ZIP, exported chunk JSON, or local ChromaDB directory.
-
-A fresh installation therefore requires preparation of a compatible index.
+A fresh clone does not include the resume dataset or a populated ChromaDB index. To enable candidate search, build an index from a CSV you are authorized to use, or import your own `resume_chunks.json` and `resume_embeddings.zip` artifacts. Both artifacts are required for the import and are excluded from the repository.
 
 ### Option A — Generate Embeddings Locally
 
@@ -1067,7 +1065,7 @@ Additional providers remain part of the future architecture.
 | Automatic Provider Fallback   | Planned                      |
 | Candidate Re-ranking          | Planned                      |
 | Automated Benchmark Suite     | Planned                      |
-| Public Hosted Deployment      | Not verified                 |
+| Public Hosted Deployment      | Not deployed                 |
 
 The current deliverable is a V1 prototype, not a completed production recruitment platform.
 
@@ -1212,7 +1210,7 @@ The modular architecture is intended to allow these improvements without replaci
 | Git repository initialized | ✅ Completed |
 | Source code initial commit created | ✅ Completed |
 | `.gitignore` configured | ✅ Completed |
-| Final README committed | ⏳ Pending |
+| Final README committed | ✅ Completed |
 | GitHub push completed | ⏳ Pending |
 | GitHub repository verified | ⏳ Pending |
 | Privacy-safe application screenshot added | ⏳ Pending |
