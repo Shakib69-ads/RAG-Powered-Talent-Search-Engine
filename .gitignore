@@ -1,0 +1,31 @@
+# API Secrets
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Python Virtual Environments
+.venv/
+.RAG-Talent-Search/
+
+# Python Cache
+__pycache__/
+*.pyc
+
+# Local Vector Database
+chromadb_full/
+
+# Resume Dataset
+data/
+
+# Log Files
+*.log
+
+# Resume Processing and Embedding Artifacts
+resume_chunks.json
+resume_embeddings.zip
+
+# Local VS Code Settings
+.vscode/
+
+# Git staging practice
