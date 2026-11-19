@@ -15,6 +15,7 @@ __pycache__/
 
 # Vector Database
 chromadb_full/
+/chromadb_backup.zip
 
 # Resume Dataset
 data/

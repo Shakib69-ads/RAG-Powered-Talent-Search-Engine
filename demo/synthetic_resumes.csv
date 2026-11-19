@@ -1,0 +1,13 @@
+Text,category,job_title
+Built Python NLP pipelines for text classification and entity extraction using PyTorch and Hugging Face Transformers. Fine-tuned BERT on labeled documents and tracked macro F1. Served predictions through FastAPI.,Machine Learning,NLP Engineer
+Developed Python models for sentiment analysis and topic classification with scikit-learn and spaCy. Automated data cleaning and cross-validation. Deployed batch inference jobs and monitored model drift.,Machine Learning,Machine Learning Engineer
+Implemented semantic document retrieval using sentence-transformers and vector search. Built a Python RAG service and measured recall on an annotated query set. Added regression checks for ranking.,Machine Learning,Applied NLP Scientist
+Built Python and SQL ETL jobs for warehouse ingestion. Scheduled Airflow workflows and added data freshness checks and retry handling. Improved daily load reliability.,Data Engineering,Data Engineer
+Designed Power BI dashboards and SQL reporting queries for inventory metrics. Documented metric definitions and reconciled report totals with finance exports.,Analytics,Data Analyst
+Built FastAPI services for order processing. Added PostgreSQL migrations and idempotency keys. Maintained API integration tests and Docker development environments.,Software Engineering,Backend Engineer
+Created responsive React interfaces with TypeScript. Added keyboard navigation and tested user flows with Playwright. Maintained a shared component library.,Software Engineering,Frontend Engineer
+Maintained Kubernetes deployments and CI pipelines. Configured Prometheus alerts and rehearsed recovery from service failures. Automated infrastructure changes with Terraform.,Infrastructure,DevOps Engineer
+Tested web applications with Playwright and pytest. Investigated flaky tests and introduced focused smoke suites for release validation.,Quality Assurance,QA Automation Engineer
+Trained image classifiers with PyTorch and evaluated augmentation strategies on labeled industrial images. Exported inference models and benchmarked latency.,Machine Learning,Computer Vision Engineer
+Built demand forecasts in Python using time-series cross-validation. Compared seasonal baselines and gradient boosting. Published forecast error dashboards.,Analytics,Forecasting Analyst
+Implemented Android views in Kotlin and handled offline synchronization. Added unit tests for conflict resolution and profiled startup performance.,Software Engineering,Android Developer

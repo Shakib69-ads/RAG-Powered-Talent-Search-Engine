@@ -624,7 +624,7 @@ def navigate(page):
 
 @st.cache_resource(show_spinner=False)
 def load_store():
-    return create_vector_store()
+    return create_vector_store(allow_demo=True)
 
 
 def skill_chips(items, kind):

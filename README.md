@@ -10,6 +10,10 @@ Built with **Python, Streamlit, Hugging Face, ChromaDB, and Groq**, the system r
 
 **Repository:** [RAG-Powered Talent Search Engine](https://github.com/Shakib69-ads/RAG-Powered-Talent-Search-Engine)
 
+**Live demo:** [Open the Streamlit app](https://rag-powered-talent-search-engine.streamlit.app)
+
+The public demo searches 12 synthetic CVs with the same embedding model used for local development. Try `Python developer with Machine Learning and NLP experience`.
+
 > **Important:** This project is an educational AI-assisted recruitment prototype. It supports candidate discovery and human evaluation; it does not make autonomous hiring decisions.
 
 ---
@@ -798,7 +802,9 @@ Never commit real API keys to GitHub.
 
 ## 18. Preparing the Vector Database
 
-A fresh clone does not include the resume dataset or a populated ChromaDB index. To enable candidate search, build an index from a CSV you are authorized to use, or import your own `resume_chunks.json` and `resume_embeddings.zip` artifacts. Both artifacts are required for the import and are excluded from the repository.
+A fresh clone includes a small ChromaDB index built from [12 synthetic CVs](demo/synthetic_resumes.csv). The Streamlit app uses `chromadb_full/` when the local database exists and otherwise opens `demo/chromadb/`, including on Streamlit Community Cloud. Both indexes use `BAAI/bge-large-en-v1.5` and the `Resume_collection` collection.
+
+The following options prepare a separate local index from a dataset you are authorized to use. The original dataset and its generated artifacts are excluded from the repository.
 
 ### Option A — Generate Embeddings Locally
 
@@ -1065,7 +1071,7 @@ Additional providers remain part of the future architecture.
 | Automatic Provider Fallback   | Planned                      |
 | Candidate Re-ranking          | Planned                      |
 | Automated Benchmark Suite     | Planned                      |
-| Public Hosted Deployment      | Not deployed                 |
+| Public Hosted Deployment      | Streamlit Community Cloud    |
 
 The current deliverable is a V1 prototype, not a completed production recruitment platform.
 
@@ -1103,9 +1109,7 @@ The Groq evaluation path sends the job description and candidate CV text to an e
 
 ### Repository Limitations
 
-The public repository excludes resume data, vector embeddings, ChromaDB files, and API credentials.
-
-Consequently, a fresh clone is not immediately ready for full candidate search without an appropriate index.
+The public repository includes the synthetic demo dataset and index. The original resume dataset, its embeddings and ChromaDB files, and API credentials are excluded.
 
 ### Human Oversight
 
@@ -1211,8 +1215,8 @@ The modular architecture is intended to allow these improvements without replaci
 | Source code initial commit created | ✅ Completed |
 | `.gitignore` configured | ✅ Completed |
 | Final README committed | ✅ Completed |
-| GitHub push completed | ⏳ Pending |
-| GitHub repository verified | ⏳ Pending |
+| GitHub push completed | ✅ Completed |
+| GitHub repository verified | ✅ Completed |
 | Privacy-safe application screenshot added | ⏳ Pending |
 | Fresh installation verified | ⏳ Pending |
 | Final end-to-end functionality verified | ⏳ Pending |
