@@ -337,7 +337,7 @@ The resulting dataset contains 5,741 unique resume records based on the developm
 
 **Dataset provenance:** The dataset was discussed during development in connection with Hire IT People and Kaggle. However, its exact original publication page, licensing terms, and redistribution permissions have not been independently established.
 
-The resume dataset is not included in the public repository.
+The original development dataset is excluded from the public repository. The public demo uses 12 synthetic CVs.
 
 ## 9. Resume Chunking
 
@@ -709,6 +709,11 @@ RAG-Powered-Talent-Search-Engine/
 |   |-- evaluation/
 |       |-- llm_evaluator.py
 |
+|-- demo/
+|   |-- synthetic_resumes.csv
+|   |-- build_index.py
+|   |-- chromadb/           # Bundled synthetic demo index
+|
 |-- data/                  # Local, ignored
 |-- chromadb_full/         # Local, ignored
 |-- resume_chunks.json     # Local, ignored
@@ -855,11 +860,13 @@ For the development dataset, the recorded count was 78,039.
 
 ## 19. Running the Application
 
-After configuring the environment and preparing the ChromaDB index:
+After installing the dependencies and setting `GROQ_API_KEY`, run:
 
 ```bash
 streamlit run app.py
 ```
+
+The app uses the bundled synthetic demo index whenever the local ChromaDB collection is absent or empty. The demo runs without an index-building step.
 
 Streamlit typically starts at:
 
@@ -1012,7 +1019,7 @@ This reduced dependence on local hardware for large-scale embedding generation.
 
 ChromaDB was selected to maintain a persistent searchable vector index on the development laptop.
 
-The index remains local and is not included in Git.
+The full development index stays on the local machine and is excluded from Git. The repository tracks the small synthetic demo index separately.
 
 ### 22.3 Consistent Embedding Model
 
@@ -1222,7 +1229,7 @@ The modular architecture is intended to allow these improvements without replaci
 | Public demo candidate retrieval and Groq evaluation verified | ✅ Completed |
 | Internship submission completed | ⏳ Pending |
 
-**Release Status:** V1 core implementation completed. Final documentation, publication, and release verification are pending.
+**Release Status:** V1 is published on GitHub. The public Streamlit demo has been verified end to end with synthetic CVs.
 
 
 ## 28. Author and Acknowledgements
