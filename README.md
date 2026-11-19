@@ -1080,6 +1080,18 @@ Additional providers remain part of the future architecture.
 | Automated Benchmark Suite     | Planned                      |
 | Public Hosted Deployment      | Streamlit Community Cloud    |
 
+### Internship Task 8 Requirements
+
+| Requirement | V1 coverage |
+|---|---|
+| RAG pipeline and natural-language semantic search | BGE embeddings and ChromaDB retrieve relevant resume chunks and select up to three distinct candidates. |
+| LLM-based evaluation of the top resumes | The app reconstructs each selected resume and passes it with the job description to Groq's `openai/gpt-oss-120b` model. Candidate cards show a fit summary and supporting CV evidence. |
+| Recommended Kaggle dataset | The brief recommends Resume Entities for NER. The exact source of the local development dataset is unverified. The public demo uses 12 synthetic CVs. |
+| Bonus: demographic bias check | Future work. The evaluation prompt instructs the model to ignore demographics. An automated audit that measures and flags demographic bias is pending. |
+| Bonus: conversational Streamlit UI | Streamlit job-description search and candidate evaluation are implemented. Candidate-specific follow-up questions are future work. |
+
+The public demo was verified end to end with three evaluated candidate cards using the synthetic dataset.
+
 The current deliverable is a V1 prototype, not a completed production recruitment platform.
 
 ## 24. Limitations, Privacy and Responsible Use
