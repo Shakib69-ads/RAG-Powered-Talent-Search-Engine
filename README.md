@@ -802,7 +802,7 @@ Never commit real API keys to GitHub.
 
 ## 18. Preparing the Vector Database
 
-A fresh clone includes a small ChromaDB index built from [12 synthetic CVs](demo/synthetic_resumes.csv). The Streamlit app uses `chromadb_full/` when the local database exists and otherwise opens `demo/chromadb/`, including on Streamlit Community Cloud. Both indexes use `BAAI/bge-large-en-v1.5` and the `Resume_collection` collection.
+A fresh clone includes a small ChromaDB index built from [12 synthetic CVs](demo/synthetic_resumes.csv). The Streamlit app uses `chromadb_full/` when it contains indexed resumes and otherwise opens `demo/chromadb/`, including on Streamlit Community Cloud. Both indexes use `BAAI/bge-large-en-v1.5` and the `Resume_collection` collection.
 
 The following options prepare a separate local index from a dataset you are authorized to use. The original dataset and its generated artifacts are excluded from the repository.
 

@@ -10,20 +10,24 @@ def create_vector_store(*, allow_demo=False):
     project_root = Path(__file__).resolve().parents[2]
     index_dir = project_root / "chromadb_full"
     demo_dir = project_root / "demo" / "chromadb"
-    if allow_demo and not (index_dir / "chroma.sqlite3").is_file():
-        if not (demo_dir / "chroma.sqlite3").is_file():
-            raise FileNotFoundError("No local or synthetic demo ChromaDB index found.")
-        index_dir = demo_dir
-
     embedding = load_embedding()
 
-    vector_store = Chroma(
+    if not allow_demo or (index_dir / "chroma.sqlite3").is_file():
+        local_store = Chroma(
+            collection_name="Resume_collection",
+            embedding_function=embedding,
+            persist_directory=str(index_dir),
+        )
+        if not allow_demo or local_store._collection.count() > 0:
+            return local_store
+
+    if not (demo_dir / "chroma.sqlite3").is_file():
+        raise FileNotFoundError("No populated local or synthetic demo ChromaDB index found.")
+    return Chroma(
         collection_name="Resume_collection",
         embedding_function=embedding,
-        persist_directory=str(index_dir)
+        persist_directory=str(demo_dir),
     )
-
-    return vector_store
 
 
 def insert_chunk():
